@@ -154,7 +154,7 @@ public:
   ~DnsParser();
 
   /**
-   * @brief dns_protocol_analysis 解析dns协议
+   * @brief protocol_analysis 解析dns协议
    * @param request http 请求内容
    * @param req
    * @return
@@ -162,8 +162,7 @@ public:
   ProtocolInfoPtr decode(const std::string &data);
 
   /**
-   * @brief show_http_protocol 打印解析出的http协议内容
-   * @brief show_dns_protocol 打印解析出的dns协议内容
+   * @brief show 打印解析出的dns协议内容
    * @param req
    */
   void show(const ProtocolInfoPtr req);
@@ -180,7 +179,7 @@ private:
                          size_t offset, std::string &domain_name);
 
   /**
-   * @brief dns_querys_decode[in] 解析DNS查询问题列表
+   * @brief querys_decode[in] 解析DNS查询问题列表
    * @param question_count[in]    查询问题数量
    * @param buffer[in]            dns协议码流起始地址
    * @param buffer_length[in]     dns协议码流长度
@@ -197,7 +196,7 @@ private:
                             ResourceRecord &resource_record);
 
   /**
-   * @brief dns_resource_record_decod[in] 解析DNS资源记录列表
+   * @brief resource_record_decod[in] 解析DNS资源记录列表
    * @param rr_count[in]                  resource record count 资源记录数量
    * @param buffer[in]                    dns协议码流起始地址
    * @param buffer_length[in]             dns协议码流长度

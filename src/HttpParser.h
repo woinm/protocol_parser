@@ -33,13 +33,18 @@ public:
   HttpParser();
   ~HttpParser();
   /**
-   * @brief
+   * @brief 协议解码
    *
    * @param data
    * @return ProtocolInfoPtr
    */
   ProtocolInfoPtr decode(const std::string &data);
 
+  /**
+   * @brief 打印解析出的http协议内容
+   *
+   * @param req
+   */
   void show(const ProtocolInfoPtr req);
 
 private:

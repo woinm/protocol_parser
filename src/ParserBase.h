@@ -43,7 +43,19 @@ class CParser {
 public:
   CParser() = default;
   ~CParser() = default;
+
+  /**
+   * @brief 协议解码
+   *
+   * @param data
+   * @return ProtocolInfoPtr
+   */
   virtual ProtocolInfoPtr decode(const std::string &data) = 0;
+
+  /**
+   * @brief show 打印解析出的协议内容
+   * @param req
+   */
   virtual void show(const ProtocolInfoPtr req) = 0;
 };
 } // namespace parser

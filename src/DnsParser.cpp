@@ -79,7 +79,6 @@ ProtocolInfoPtr DnsParser::decode(const std::string &data) {
     }
   }
   dns_protocol->decode_status = EN_DECODE_SUCCESS;
-  // show_dns_protocol(dns_protocol);
   return dns_protocol;
 }
 
